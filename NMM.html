@@ -1,0 +1,1169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mafikeng Digital Innovation Hub - Cisco</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; 
+            color: #000; 
+        }
+        
+#header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.logo img {
+  width: 100px;
+  height: auto;
+ 
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-menu a:hover {
+  color: #e1b800;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transform: perspective(800px) rotateY(10deg);
+}
+
+.drop-down ul {
+  position: absolute;
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+}
+
+.drop-down:hover ul {
+  display: block;
+}
+
+.drop-down ul li {
+  padding: 5px 15px;
+}
+
+.header-social-links a {
+  color: black;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.header-social-links a:hover {
+  color: #49a84c;
+  transform: scale(1.1);
+}
+
+@media (max-width: 991px) {
+  .nav-menu {
+    display: none;
+  }
+  .header-social-links {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  #mobile-menu {
+    display: block;
+    cursor: pointer;
+  }
+  #menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 100%;
+  }
+  #menu.show {
+    display: flex;
+  }
+}
+        .header2 {
+    background-color: #0078D4;
+    padding: 2vw 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5vw;
+    max-width: 1200px;
+}
+
+.logo-left img, .logo-right img {
+    max-height: clamp(30px, 10vw, 80px);
+}
+
+.title-center {
+    text-align: center;
+    flex-grow: 1;
+    font-size: clamp(0.7rem, 1vw, 1rem);
+}
+
+.logo-right {
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .title-center {
+        order: 2;
+        font-size: 1rem;
+    }
+    
+    .logo-left, .logo-right {
+        margin: 5px 0;
+    }
+}
+
+.section {
+    padding: 1rem;
+}
+.section:hover{
+    transform: scale(1.2);
+}
+.center-info {
+    background-color: transparent;
+    color: #000;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 1200px;
+}
+
+h2 {
+    color: #003366;
+    font-weight: bold;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+h5 {
+    margin: 0.5rem 0;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+
+.card-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+}
+
+.features-list li {
+    margin-bottom: 10px;
+    flex-basis: 45%;
+}
+
+.image-content img, 
+.video-content video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        .Gallery {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px;
+            text-align: center; 
+        }
+        .Gallery h1 {
+            font-size: 2.5em; 
+            margin-bottom: 20px; 
+            color: #333; 
+        }
+        .images {
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+            gap: 10px; 
+        }
+        .images img {
+            width: 100%; 
+            height: auto; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            transition: transform 0.3s ease; 
+        }
+        .images img:hover {
+            transform: scale(1.05); 
+        }
+        .team-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.team-member {
+    position: relative;
+}
+
+.card2 {
+    padding: 20px;
+    border-radius: 1px; 
+    box-shadow: 0 4px 8px #000;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.card2 img {
+    width: 100%;
+    height: 220px; 
+    object-fit: cover;
+}
+
+.info {
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+.title {
+    color: #666;
+}
+
+.bio {
+    display: none; 
+    color: #333;
+}
+
+
+.card2:hover .bio {
+    display: block; 
+}
+
+.card2:hover .title {
+    display: none; 
+}
+
+.card2:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+ 
+.loading {
+ --speed-of-animation: 0.9s;
+ --gap: 6px;
+ --first-color: #4c86f9;
+ --second-color: #49a84c;
+ --third-color: #f6bb02;
+ --fourth-color: #f6bb02;
+ --fifth-color: #2196f3;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100px;
+ gap: 6px;
+ height: 100px;
+}
+
+.loading span {
+ width: 4px;
+ height: 50px;
+ background: var(--first-color);
+ animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loading span:nth-child(2) {
+ background: var(--second-color);
+ animation-delay: -0.8s;
+}
+
+.loading span:nth-child(3) {
+ background: var(--third-color);
+ animation-delay: -0.7s;
+}
+
+.loading span:nth-child(4) {
+ background: var(--fourth-color);
+ animation-delay: -0.6s;
+}
+
+.loading span:nth-child(5) {
+ background: var(--fifth-color);
+ animation-delay: -0.5s;
+}
+
+@keyframes scale {
+ 0%, 40%, 100% {
+  transform: scaleY(0.05);
+ }
+
+ 20% {
+  transform: scaleY(1);
+ }
+}
+
+#wifi-loader {
+  --background: #62abff;
+  --front-color: #4f29f0;
+  --back-color: #c3c8de;
+  --text-color: #414856;
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  left: 80px;
+  top: 80px;
+}
+
+#wifi-loader svg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wifi-loader svg circle {
+  position: absolute;
+  fill: none;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(-100deg);
+  transform-origin: center;
+}
+
+#wifi-loader svg circle.back {
+  stroke: var(--back-color);
+}
+
+#wifi-loader svg circle.front {
+  stroke: var(--front-color);
+}
+
+#wifi-loader svg.circle-outer {
+  height: 86px;
+  width: 86px;
+}
+
+#wifi-loader svg.circle-outer circle {
+  stroke-dasharray: 62.75 188.25;
+}
+
+#wifi-loader svg.circle-outer circle.back {
+  animation: circle-outer135 1.8s ease infinite 0.3s;
+}
+
+#wifi-loader svg.circle-outer circle.front {
+  animation: circle-outer135 1.8s ease infinite 0.15s;
+}
+
+#wifi-loader svg.circle-middle {
+  height: 60px;
+  width: 60px;
+}
+
+#wifi-loader svg.circle-middle circle {
+  stroke-dasharray: 42.5 127.5;
+}
+
+#wifi-loader svg.circle-middle circle.back {
+  animation: circle-middle6123 1.8s ease infinite 0.25s;
+}
+
+#wifi-loader svg.circle-middle circle.front {
+  animation: circle-middle6123 1.8s ease infinite 0.1s;
+}
+
+#wifi-loader svg.circle-inner {
+  height: 34px;
+  width: 34px;
+}
+
+#wifi-loader svg.circle-inner circle {
+  stroke-dasharray: 22 66;
+}
+
+#wifi-loader svg.circle-inner circle.back {
+  animation: circle-inner162 1.8s ease infinite 0.2s;
+}
+
+#wifi-loader svg.circle-inner circle.front {
+  animation: circle-inner162 1.8s ease infinite 0.05s;
+}
+
+#wifi-loader .text {
+  position: absolute;
+  bottom: -40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.2px;
+}
+
+#wifi-loader .text::before, #wifi-loader .text::after {
+  content: attr(data-text);
+}
+
+#wifi-loader .text::before {
+  color: var(--text-color);
+}
+
+#wifi-loader .text::after {
+  color: var(--front-color);
+  animation: text-animation76 3.6s ease infinite;
+  position: absolute;
+  left: 0;
+}
+
+@keyframes circle-outer135 {
+  0% {
+    stroke-dashoffset: 25;
+  }
+
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  65% {
+    stroke-dashoffset: 301;
+  }
+
+  80% {
+    stroke-dashoffset: 276;
+  }
+
+  100% {
+    stroke-dashoffset: 276;
+  }
+}
+
+@keyframes circle-middle6123 {
+  0% {
+    stroke-dashoffset: 17;
+  }
+
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  65% {
+    stroke-dashoffset: 204;
+  }
+
+  80% {
+    stroke-dashoffset: 187;
+  }
+
+  100% {
+    stroke-dashoffset: 187;
+  }
+}
+
+@keyframes circle-inner162 {
+  0% {
+    stroke-dashoffset: 9;
+  }
+
+  25% {
+    stroke-dashoffset: 0;
+  }
+
+  65% {
+    stroke-dashoffset: 106;
+  }
+
+  80% {
+    stroke-dashoffset: 97;
+  }
+
+  100% {
+    stroke-dashoffset: 97;
+  }
+}
+
+@keyframes text-animation76 {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  50% {
+    clip-path: inset(0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+ 
+
+
+.loader {
+  position: absolute;
+}
+
+.cercle {
+  position: absolute;
+  background: #3e82f7;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  top: -40px;
+  left: 150px; 
+  animation: move-up6 .4s ease-in infinite alternate-reverse;
+  z-index: 1;
+}
+
+
+.cercle:nth-child(2) {
+  width: 25px;
+  height: 25px;
+  top: -2px;
+  left: 120px;
+  background: #8b008b;
+  animation: move-down1 .4s ease-in infinite alternate-reverse;
+}
+
+.cercle:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  top: 35px;
+  left: 100px;
+  background: #fff700;
+  animation: move-updown1 .4s ease-in infinite alternate-reverse;
+}
+
+.cercle:nth-child(4) {
+  width: 12px;
+  height: 12px;
+  top: -10px;
+  left: 110px;
+  background: #00711e;
+  animation: move-up6 .4s ease-in infinite alternate-reverse;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes move-updown1 {
+  to {
+    transform: translateY(10px);
+  }
+
+  from {
+    transform: translateY(-7px);
+  }
+}
+
+.next {
+    position: fixed; 
+    bottom: 80px; 
+    right: 20px; 
+}
+
+.platform-button {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #49a84c; 
+    color: black; 
+    border: none; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    font-size: 1rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.platform-button:hover {
+    background-color: #4f29f0; 
+    transform: translateY(-2px); 
+}
+.breadcrumb {
+    font-size: 1rem;
+    margin-bottom: 2px;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #003366; 
+    font-weight: 700;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: #49a84c; 
+    font-weight: 700; 
+}
+
+
+
+footer {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: #0078D4; 
+    color: white; 
+    text-align: center; 
+    padding: 10px 0; 
+    font-size: 0.9rem; 
+}
+
+.section {
+  padding: 20px;
+  margin: 10px auto;
+  margin-bottom: 70px;
+  width: 90%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #ffffff; /
+  font-size: 1.8em;
+}
+
+.section p, .section ul {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.section a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0078D4;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  background-color: #005A8D;
+}
+
+#targeted-sectors{
+    background-color: #49a84c;
+    color: #fff;
+}
+#networking-academy{
+    background-color: #f69d02;
+    color: #fff;
+}
+#incubation-program{
+    background-color: #0078D4;
+    color: #fff;
+}
+#mdi-hub{
+    background-color: #333;
+    color: #fff;
+}
+.hot {
+    text-align: center;
+    margin: 20px;
+}
+
+.office-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.office-space {
+    background-color: #fff;
+    padding: 20px;
+    border: none;
+    width: calc(25% - 10px); 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.office-space img {
+    width: 100%;
+    
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .office-space {
+        width: 100%; 
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!--
+    <div class="loader">
+    <div class="loading">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>-->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo mr-auto"><img src="assets/img/favicon.png" alt="Logo" class="img-fluid"></a>
+        <nav class="nav-menu d-none d-lg-flex">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="drop-down"><a href="#">About</a>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="partners.html">Partners and Donations</a></li>
+              </ul>
+            </li>
+            <li class="drop-down"><a href="#">Recruitment</a>
+              <ul>
+                <li><a href="Incubation-application.html">Incumbent Applications</a></li>
+                <li><a href="vacancies.html">Vacancies</a></li>
+                <li><a href="programs.html">Programs</a></li>
+              </ul>
+            </li>
+            <li><a href="companies.html">Companies</a></li>
+            <li class="drop-down"><a href="#">Services</a>
+              <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="prices.html">Prices</a></li>
+              </ul>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="centers.html">Centers</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-social-links">
+          <a href="https://twitter.com/MafIHub" class="twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.facebook.com/Mafihub" class="facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://instagram.com/mafikeng.innovation.hub" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/mafikeng-digital-innovation-hub/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div id="mobile-menu" class="d-lg-none"><i class="fas fa-bars"></i></div>
+        <div id="menu" class="d-lg-none">
+          <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="drop-down"><a href="#">About</a>
+              <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="partners.html">Partners and Donations</a></li>
+              </ul>
+            </li>
+            <li class="drop-down"><a href="#">Recruitment</a>
+              <ul>
+                <li><a href="Incubation-application.html">Incumbent Applications</a></li>
+                <li><a href="vacancies.html">Vacancies</a></li>
+                <li><a href="programs.html">Programs</a></li>
+              </ul>
+            </li>
+            <li><a href="companies.html">Companies</a></li>
+            <li class="drop-down"><a href="#">Services</a>
+              <ul>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="prices.html">Prices</a></li>
+              </ul>
+            </li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="tenders.html">Tenders</a></li>
+            <li><a href="centers.html">Centers</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <header class="header2">
+        
+        <div class="header-container">
+           
+            <div class="logo-left">
+                <img src="images/Picture2.png" alt="Logo">
+            </div>
+            
+
+         
+            <div class="title-center">
+                <h1 id="fade-in-title"></h1>
+                <p>Awakening innovative excellence while unlocking economic growth within the NW Province.</p>
+            </div>
+            
+            <div class="logo-right">
+                <img src="images/cisco.png" alt="Another Logo">
+            </div>
+        </div>
+    </header>
+    <nav class="breadcrumb">
+        <a href="index.html">Home|</a>
+        <span>Specialized zones</span>
+    </nav>
+
+<div id="wifi-loader">
+    <svg class="circle-outer" viewBox="0 0 86 86">
+        <circle class="back" cx="43" cy="43" r="40"></circle>
+        <circle class="front" cx="43" cy="43" r="40"></circle>
+        <circle class="new" cx="43" cy="43" r="40"></circle>
+    </svg>
+    <svg class="circle-middle" viewBox="0 0 60 60">
+        <circle class="back" cx="30" cy="30" r="27"></circle>
+        <circle class="front" cx="30" cy="30" r="27"></circle>
+    </svg>
+    <svg class="circle-inner" viewBox="0 0 34 34">
+        <circle class="back" cx="17" cy="17" r="14"></circle>
+        <circle class="front" cx="17" cy="17" r="14"></circle>
+    </svg>
+    <div class="text" data-text="Searching"></div>
+</div>
+        
+    <section class="cisco" id="cisco-edge">
+        <div class="container">
+            <div class="center-info">
+                <h2>Mafikeng Cisco EDGE Center</h2>
+                <div class="card black-card" style="margin-top: 60px;">
+                    <div class="card-content" style="display: flex; align-items: flex-start; justify-content: space-between;">
+                       
+                        <div class="image-container" style="flex: 1 1 50%; padding-right: 40px;">
+                            <a href="https://www.itweb.co.za/article/ciscos-smme-incubation-hub-opens-in-north-west/nWJadvbNZrgvbjO1" target="_blank">
+                                <img src="images/cisco.webp" alt="Cisco EDGE Center" style="width: 100%; height: auto; border-radius: 1px;">
+                            </a>
+                        </div>
+                        
+                        
+                        <div class="text-container" style="flex: 1 1 50%; padding-left: 40px;">
+                            <h4>
+                                The Mafikeng Cisco EDGE Centre 
+                                ..
+                            </h4>
+                            <p>
+                             The Mafikeng Cisco EDGE centre is a partnership between Mafikeng Digital Innovation Hub and Cisco SA. <br> The Mafikeng Cisco EDGE Centre is an incubation space with a Cisco Networking Academy. <br>
+                              The space is designed to engage the local ICT SMME market and introduce them to the era of the Fourth Industrial Revolution (4IR) 
+                              with Cisco as the key enabler. The centre will help these SMMEs scale within their respective disciplines using the Cisco technology stack, with the 
+                              opportunity to become Cisco partner reseller.
+                              Led by <strong>Boingotlo Molefhe</strong> as a center manager, specializing in ..... 
+                            </p>
+                            <p>
+                                The Cisco EDGE Center is an innovation hub designed to foster technological advancements and digital transformation in various sectors. It serves as a collaborative environment where businesses, startups, and academic institutions come together to leverage Cisco’s cutting-edge technologies and resources.
+                                <br>
+                                The Cisco EDGE Center accelerates innovation and helps businesses scale faster in an increasingly digital economy.
+                            </p>
+                            <h1 style="margin-top: 20px;">What Cisco EDGE Incubation Centers Offer</h1>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 10px;">
+                                    <strong>State-of-the-art communication and collaboration technology</strong> – Access to the latest Cisco networking and connectivity tools.
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <strong>Training and Enablement Programs</strong> – Skill development programs including IT, cybersecurity, and more via Cisco Networking Academy.
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <strong>Business Innovation Support</strong> – Assistance in accelerating digital transformation and going to market faster.
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <strong>Incubation for SMMEs</strong> – Providing workspace and resources for small businesses to grow using global expertise.
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <strong>Job Creation and Economic Development</strong> – Supporting job creation and helping local economies thrive.
+                                </li>
+                                <li style="margin-bottom: 10px;">
+                                    <strong>Focus on Key Sectors</strong> – Specialized support in areas like agriculture, sustainability, and cybersecurity.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+
+<div class="services-images" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+    <div style="text-align: center; margin: 10px;">
+        <img src="images/cost.png" alt="Cost Management" style="width: 150px; height: auto; border-radius: 5px;">
+        <p style="color: black; font-weight: bold;">Cost Management</p>
+    </div>
+    <div style="text-align: center; margin: 10px;">
+        <img src="images/business.avif" alt="Business Support" style="width: 150px; height: auto; border-radius: 5px;">
+        <p style="color: black; font-weight: bold;">Business Support</p>
+    </div>
+    <div style="text-align: center; margin: 10px;">
+        <img src="images/operations.avif" alt="Operational Efficiency" style="width: 150px; height: auto; border-radius: 5px;">
+        <p style="color: black; font-weight: bold;">Operational Efficiency</p>
+    </div>
+    <div style="text-align: center; margin: 10px;">
+        <img src="images/inspire.avif" alt="Innovation & Inspiration" style="width: 150px; height: auto; border-radius: 5px;">
+        <p style="color: black; font-weight: bold;">Innovation & Inspiration</p>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <div class="section" id="targeted-sectors">
+        <h2>Targeted Sectors</h2>
+        <p>The Cisco EDGE Center focuses on empowering individuals and organizations in various sectors by providing training, resources, and opportunities to excel in the digital economy. The targeted sectors include:</p>
+        <ul>
+            <li>Information Technology & Networking</li>
+            <li>Cybersecurity & Data Protection</li>
+            <li>Internet of Things (IoT)</li>
+            <li>Artificial Intelligence & Machine Learning</li>
+            <li>Entrepreneurship & Digital Transformation</li>
+        </ul>
+    </div>
+
+    
+    <div class="section" id="networking-academy">
+        <h2>Networking Academy Curriculum & Certifications</h2>
+        <p>The Cisco Networking Academy offers a comprehensive curriculum to equip individuals with the skills necessary for a successful career in networking and IT. The curriculum includes:</p>
+        <ul>
+            <li><strong>CCNA (Cisco Certified Network Associate):</strong> Learn the fundamentals of networking, IP addressing, and routing.</li>
+            <li><strong>CCNP (Cisco Certified Network Professional):</strong> Advanced knowledge of enterprise networking and troubleshooting.</li>
+            <li><strong>CyberOps Associate:</strong> A certification focusing on cybersecurity and protecting networks from cyber threats.</li>
+            <li><strong>IoT Fundamentals:</strong> Understand the Internet of Things, its architecture, and applications.</li>
+            <li><strong>Cybersecurity Essentials:</strong> Learn key cybersecurity concepts and practices to secure networks and devices.</li>
+        </ul>
+    </div>
+
+    
+    <div class="section" id="incubation-program">
+        <h2>Apply for Our Incubation Program</h2>
+        <p>Our incubation program supports tech startups and entrepreneurs by offering mentorship, resources, and a collaborative environment to nurture innovative ideas. If you have an innovative startup idea, apply for our incubation program to gain access to:</p>
+        <ul>
+            <li>Expert mentorship and coaching</li>
+            <li>Co-working space and hot desking</li>
+            <li>Access to a network of industry professionals</li>
+            <li>Funding opportunities and venture capital access</li>
+        </ul>
+        <p><a href="application-form.html" class="cta-btn">Apply Now</a></p>
+    </div>
+
+    
+    <div class="section" id="mdi-hub">
+        <h2>MDI Hub Offering to NW Province</h2>
+        <p>MDI Hub offers unique opportunities to the North West province by providing resources for digital skills development, business incubation, and community building. Our offerings include:</p>
+        <ul>
+            <li>Digital literacy programs</li>
+            <li>Entrepreneurship training and workshops</li>
+            <li>Networking and industry events</li>
+            <li>Start-up and small business incubation support</li>
+        </ul>
+        <p>Join the growing community of innovators in the North West province and benefit from our transformative programs.</p>
+    </div>
+
+    <div class="hot" id="hot-desking">
+        <h2>Hot Desking</h2>
+        <p>We offer flexible hot desking options to suit your needs. Whether you need space for an hour, a day, a week, or a month, our office spaces are designed to help you focus and work efficiently. View our available spaces below:</p>
+    
+        <div class="office-container">
+            <div class="office-space">
+                <img src="images/office-1.jpg" alt="Office Space 1" class="space-img">
+                <h3>Hourly Booking</h3>
+                <p>Perfect for freelancers or individuals who need temporary workspace.</p>
+                <p>Price: R100/hour</p>
+            </div>
+    
+            <div class="office-space">
+                <img src="images/office-2.jpg" alt="Office Space 2" class="space-img">
+                <h3>Daily Booking</h3>
+                <p>Ideal for those needing a full day of productivity in a professional environment.</p>
+                <p>Price: R400/day</p>
+            </div>
+    
+            <div class="office-space">
+                <img src="images/office-3.jpg" alt="Office Space 3" class="space-img">
+                <h3>Weekly Booking</h3>
+                <p>Perfect for teams or individuals needing an extended period of focus.</p>
+                <p>Price: R1500/week</p>
+            </div>
+    
+            <div class="office-space">
+                <img src="images/office-4.jpg" alt="Office Space 4" class="space-img">
+                <h3>Monthly Booking</h3>
+                <p>For professionals looking for a long-term workspace solution.</p>
+                <p>Price: R15000/month</p>
+            </div>
+
+            <div class="office-space">
+                <img src="images/office-4.jpg" alt="Office Space 4" class="space-img">
+                <h3>Monthly Booking</h3>
+                <p>For professionals looking for a long-term workspace solution.</p>
+                <p>Price: R15000/month</p>
+            </div>
+
+            <div class="office-space">
+                <img src="images/office-4.jpg" alt="Office Space 4" class="space-img">
+                <h3>Monthly Booking</h3>
+                <p>For professionals looking for a long-term workspace solution.</p>
+                <p>Price: R15000/month</p>
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+<section id="team" class="team-section">
+    <h2>Meet Our Team</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <div class="card2">
+                <img src="images/Binza.jpg" alt="Binza">
+                <div class="info">
+                    <h3>Boingotlo Molefhe</h3>
+                    <p class="title">Cisco Center<br>  Manager</p>
+                    <p class="bio">He is an experienced leader with a passion for innovation and team success.</p>
+                </div>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="card2">
+                <img src="images/Sbo.jpg" alt="Sbo">
+                <div class="info">
+                    <h3>Sebongile Ndaba</h3>
+                    <p class="title">Center Administration <br> Officer </p>
+                    <p class="bio">She is an outstanding administrator, excelling in organization and leadership.</p>
+                </div>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="card2">
+                <img src="images/Kabelo.jpg" alt="KayB">
+                <div class="info">
+                    <h3>Kabelo Moshoette</h3>
+                    <p class="title">Software Developer</p>
+                    <p class="bio">Kabelo is one of our best member of our development team.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="next">
+    <a href="power.html" class="platform-button">Power Platform</a>
+</div>
+
+<footer>
+    &copy; <span id="current-year"></span> Mafikeng Digital Innovation Hub. All rights reserved.
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

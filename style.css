@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 50px; /* Adjust the width according to the image */
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 18px;
+  line-height: 1.2;
+  color: black;
+  font-weight: normal;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+  width: 35px;
+  cursor: pointer;
+  background-color: #E2F0DA;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.menu-bar {
+  height: 3px;
+  background-color: #4A4A4A;
+  border-radius: 2px;
+}
+
+.content-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.content-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.text-content {
+  text-align: justify;
+  padding: 0 20px;
+}
+
+.living-labs-logo {
+  width: 100px;
+  margin: 20px auto;
+  display: block;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  color: #333;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #666;
+  margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 16px;
+  }
+
+  .content-image {
+      max-height: 250px;
+  }
+
+  .text-content {
+      padding: 0 10px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.programs-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.program-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 15px;
+}
+
+.program-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.program-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 1024px) {
+  .programs-section {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .programs-section {
+      grid-template-columns: 1fr;
+  }
+}
+
+.section {
+  padding: 20px;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #0078D4; /* Cisco Blue */
+  font-size: 1.8em;
+}
+
+.section p, .section ul {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.section a {
+  color: #0078D4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+.cta-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0078D4;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  background-color: #005A8D;
+}
+
+.office-space {
+  display: inline-block;
+  width: 45%;
+  margin: 10px 2.5%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.office-space img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.office-space h3 {
+  font-size: 1.4em;
+  color: #0078D4;
+}
+
+.office-space p {
+  font-size: 1em;
+}

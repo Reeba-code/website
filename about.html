@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About Us-Mafikeng Digital Innovation Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+      body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+}
+  
+    #header {
+      position: relative;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo img {
+      width: 100px;
+      height: auto;
+    }
+
+    .logo img:hover {
+      transform: scale(1.1);
+    }
+
+    .nav-menu ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-menu a {
+      color: #000;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 10px 20px;
+      text-decoration: none;
+      position: relative;
+    }
+
+    .nav-menu a:hover {
+      color: #ffd700; 
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+      transform: perspective(800px) rotateY(10deg);
+    }
+
+    .drop-down ul {
+      position: absolute;
+      display: none;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 5px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      padding: 10px 0;
+    }
+
+    .drop-down:hover ul {
+      display: block;
+    }
+
+    .drop-down ul li {
+      padding: 5px 15px;
+    }
+
+    .header-social-links a {
+      color: black;
+      margin-left: 15px;
+      font-size: 1.2rem;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .header-social-links a:hover {
+      color: #ffd700; 
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 991px) {
+      .nav-menu {
+        display: none;
+      }
+      .header-social-links {
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+      }
+      #mobile-menu {
+        display: block;
+        cursor: pointer;
+      }
+      #menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        width: 100%;
+      }
+      #menu.show {
+        display: flex;
+      }
+    }
+
+
+.container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .about {
+      text-align: center;
+      padding: 60px 0;
+    }
+    .about h1 {
+      font-size: 3rem;
+      color: #000;
+      font-weight: bold;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+    .about p {
+      font-size: 1.3rem;
+      color: #000;
+    }
+    .section {
+      margin-top: 100px;
+    }
+    .section h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #000;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .section p {
+      margin-bottom: 20px;
+      color: #000;
+    }
+    .values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .value-box {
+      flex: 1 1 calc(33.33% - 20px);
+      padding: 20px;
+      background: #996515;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 8px 20px rgba(255, 255, 255, 0.1);
+      transform-style: preserve-3d;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .value-box:hover {
+      transform: scale(1.05) translateZ(20px) rotateY(10deg);
+      box-shadow: 0 10px 30px #000, 0 10px 30px #000
+    }
+    .value-box h3 {
+      font-size: 1.7rem;
+      color: #000;
+      text-shadow: 0 0 10px #fff;
+      margin-bottom: 10px;
+    }
+
+ 
+    .floating-icon {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      opacity: 0.3;
+      animation: float 6s ease-in-out infinite;
+    }
+    .icon1 {
+      top: 20%;
+      left: 10%;
+      background-color: #996515;
+      border-radius: 50%;
+    }
+    .icon2 {
+      bottom: 30%;
+      right: 15%;
+      background-color: #996515;
+      border-radius: 10%;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0); }
+      50% { transform: translateY(-20px) rotate(45deg); }
+    }
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; 
+    overflow: hidden;
+}
+
+.hero-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.im {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInUpShift 3s ease-out infinite;
+}
+
+@keyframes fadeInUpShift {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 20%);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -80%);
+    }
+}
+.about-us{
+    margin-top: -120px;
+}
+
+.about-us .content h2 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 60px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.about-us .content h3 {
+  font-weight: 500;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.about-us .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-us .content ul li {
+  padding: 10px 0 0 28px;
+  position: relative;
+}
+
+.about-us .content ul i {
+  left: 0;
+  top: 7px;
+  position: absolute;
+  font-size: 20px;
+  color: #996515;
+}
+
+.about-us .content p:last-child {
+  margin-bottom: 0;
+}
+
+.us{
+    color: #000;
+}
+.ri-check-double-line{
+    color: #b39200;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f5f5f5; 
+  border-radius: 10px;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+  font-size: 40px;
+  color: #996515; 
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+
+#footer {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    margin: 0; 
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+
+.footer-logo img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+
+.footer-links a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.social-icons a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    width: 20px; 
+    height: 20px;
+    background-color: rgba(255, 215, 0, 0.3); 
+    border-radius: 50%;
+    animation: bounce 3s ease-in-out infinite;
+}
+
+.circle:nth-child(1) { top: 20%; left: 10%; }
+.circle:nth-child(2) { top: 50%; left: 30%; }
+.circle:nth-child(3) { top: 70%; left: 60%; }
+.circle:nth-child(4) { top: 30%; left: 80%; }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+}
+
+  </style>
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <div class="container d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo mr-auto"><img src="images/logo.png" alt="Logo" class="img-fluid"></a>
+          <nav class="nav-menu d-none d-lg-flex">
+            <ul>
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="drop-down"><a href="#">About</a>
+                <ul>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="team.html">Team</a></li>
+                
+                </ul>
+              </li>
+              <li class="drop-down"><a href="#">Recruitment</a>
+                <ul>
+                  <li><a href="Incubation-application.html">Incumbent Applications</a></li>
+                  <li><a href="vacancies.html">Vacancies</a></li>
+                  <li><a href="programs.html">Programs</a></li>
+                </ul>
+              </li>
+              <li><a href="companies.html">Companies</a></li>
+              <li class="drop-down"><a href="#">Services</a>
+                <ul>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="prices.html">Prices</a></li>
+                </ul>
+              </li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="centers.html">Centers</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="header-social-links">
+            <a href="https://twitter.com/MafIHub" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/Mafihub" class="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/mafikeng.innovation.hub" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/mafikeng-digital-innovation-hub/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+          </div>
+          <div id="mobile-menu" class="d-lg-none"><i class="fas fa-bars"></i></div>
+          <div id="menu" class="d-lg-none">
+            <ul>
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="drop-down"><a href="#">About</a>
+                <ul>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="team.html">Team</a></li>
+                  <li><a href="partners.html">Partners and Donations</a></li>
+                </ul>
+              </li>
+              <li class="drop-down"><a href="#">Recruitment</a>
+                <ul>
+                  <li><a href="Incubation-application.html">Incumbent Applications</a></li>
+                  <li><a href="vacancies.html">Vacancies</a></li>
+                  <li><a href="programs.html">Programs</a></li>
+                </ul>
+              </li>
+              <li><a href="companies.html">Companies</a></li>
+              <li class="drop-down"><a href="#">Services</a>
+                <ul>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="prices.html">Prices</a></li>
+                </ul>
+              </li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="tenders.html">Tenders</a></li>
+              <li><a href="centers.html">Facilities</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      
+      <section class="hero">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="hero-image">
+            <img src="images/robo.jpg" alt="robo">
+            <h3 class="im">Awakening Innovative Excellence</h3>
+        </div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </section>
+    
+      <section>
+  <div class="container">
+    <div class="about">
+      <h1>About Us</h1>
+      <p>Empowering Innovation for Tomorrow</p>
+    </div>
+
+    <div class="section">
+     
+      <section id="about-us" class="about-us">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="row content">
+            <div class="col-lg-6" data-aos="fade-right">
+              <h2> Mafikeng Digital Innovation Hub</h2>
+              <img src="assets/img/favicon.png" style="width: 400px; height: 300px; margin-right: 8px; vertical-align: middle;">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left">
+              <p>
+              Mahikeng innovation hub (MIHub) is an innovative co-working techno hub in the heart of Mahikeng, capital city of the North West Province, with it's focus being unearthing and cultivating innovative 4IR solutions that will ultimately assist communities to acclimatize in this vast changing technological world, while improving efficiency. We specialize in;
+              </p>
+              <ul>
+                <li class="us"><i class="ri-check-double-line"></i> Inclusive, technology-driven development</li>
+                <li class="us"><i class="ri-check-double-line"></i> Early start-up Incubation</li>
+                <li class="us"><i class="ri-check-double-line"></i> Prototype development</li>
+                 <li class="us"><i class="ri-check-double-line"></i> Hackathons</li>
+                <li class="us"><i class="ri-check-double-line"></i>  Skills Development</li>
+               
+              </ul>
+              <p class="font-italic">
+               With the world moving towards seamless and integrated solutions, MIHub has created an innovative platform to support entrepreneurs to drive their business with the latest technology, ignite innovative excellence, build products and solutions that will ultimately bear social, technological and economic benefits to the North West Province while competing on a global stage. “innovate for tomorrow’s world today”
+              </p>
+                    <h2 class="tm-text-primary mb-4 tm-section-title">Supported by</h2>
+               <img src="assets/img/clients/dedect.jpg" >
+             
+            </div>
+          </div>
+    </div>
+
+    <div class="section">
+      <h2>Our Core Values</h2>
+      <div class="values">
+        <div class="value-box">
+          <h3>Innovation</h3>
+          <p>We believe that every problem holds the seed of a powerful solution. Our focus is on turning visionary ideas into impactful digital products.</p>
+        </div>
+        <div class="value-box">
+          <h3>Community</h3>
+          <p>We are committed to building a tech-savvy community, empowering individuals, and fostering collaboration across diverse backgrounds.</p>
+        </div>
+        <div class="value-box">
+          <h3>Sustainability</h3>
+          <p>Our initiatives are driven by the goal of creating a resilient tech landscape that is both economically and socially sustainable.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 >What We Do</h2>
+      <p>We specialize in <strong>AI-driven projects, digital skills development, and tech-based startups.</strong> Our services include training programs, startup incubation, and collaborative opportunities with industry experts to bring advanced technology solutions to life.</p>
+      <div class="card-container">
+
+        
+        <div class="card" >
+          <img src="images/Code (2).jpg" alt="Software Development">
+          <h2>Software Development</h2>
+          <p>We create robust software solutions tailored to solve complex business challenges, using modern programming languages and frameworks to deliver high-quality, scalable products.</p>
+        </div>
+      
+      
+        <div class="card" >
+          <img src="images/iot.jpg" alt="IoT">
+          <h2>Internet of Things (IoT)</h2>
+          <p>Our IoT services connect devices and systems, enabling smarter environments through data-driven insights for real-time decision-making and process optimization.</p>
+        </div>
+      
+       
+        <div class="card" >
+          <img src="images/agri.jpg" alt="AgriTech">
+          <h2>AgriTech</h2>
+          <p>Leveraging technology for sustainable agriculture, we offer solutions that improve crop yield, streamline farming processes, and enhance resource management.</p>
+        </div>
+      
+      
+        <div class="card" >
+          <img src="images/download.webp" alt="AWS">
+          <h2>AWS</h2>
+          <p>Certified AWS expertise to help businesses scale in the cloud, improve their infrastructure, and maximize efficiency with Amazon Web Services.</p>
+        </div>
+      
+       
+        <div class="card" >
+          <img src="images/Power-Platform.webp" alt="Microsoft Power Platform">
+          <h2>Microsoft Power Platform</h2>
+          <p>Our team uses Power Platform to build low-code solutions, enabling rapid app development and process automation tailored to meet business needs.</p>
+        </div>
+      
+       
+        <div class="card" >
+          <img src="images/AI.jpg" alt="Artificial Intelligence">
+          <h2>Artificial Intelligence (AI)</h2>
+          <p>From machine learning to natural language processing, we implement AI-driven technologies to solve real-world problems and enhance user experiences.</p>
+        </div>
+      
+        <div class="card" >
+          <img src="images/win.jpg" alt="Drones">
+          <h2>Hackathons</h2>
+          <p>The Mafikeng Digital Innovation Hub Hackathon invites participants to create innovative digital solutions that address community challenges and drive economic growth through technology.</p>
+        </div>
+      
+        
+        <div class="card">
+          <img src="images/choong-deng-xiang--WXQm_NTK0U-unsplash.jpg" alt="3D Printing">
+          <h2>3D Printing</h2>
+          <p>We use 3D printing technology for rapid prototyping, allowing for innovative product designs, faster iteration, and customized manufacturing solutions.</p>
+        </div>
+      
+       
+        <div class="card" >
+          <img src="images/VR.jpg" alt="AR & VR">
+          <h2>AR & VR</h2>
+          <p>Immersive experiences using augmented and virtual reality, transforming training, entertainment, and educational applications with engaging simulations.</p>
+        </div>
+        <div class="card" >
+            <img src="images/dash.png" alt="AR & VR">
+            <h2>Incubation</h2>
+            <p>Join the most interactive, dynamic, smart platform where technocrats, innovators, businesses, academics and research community collaborate and innovate.<br> MDIHub offers solutions suited to both Start-ups, locally established businesses, international businesses, Donors and Academic institutions. </p>
+          </div>
+      
+      </div>
+      
+      
+      
+    </div>
+</section>
+
+
+<footer id="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Brand Logo">
+        </div>
+        
+        <div class="footer-links">
+            <a href="#terms">Terms & Conditions</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#cookies">Cookies</a>
+        </div>
+        
+        <div id="social-links" class="social-icons">
+           
+        </div>
+  
+        <p class="copyright">
+            &copy; <span id="current-year"></span> Mafikeng Digital Innovation Hub. All Rights Reserved.
+        </p>
+    </div>
+  </footer>
+  
+  
+  
+  
+  <script>
+    document.getElementById("mobile-menu").onclick = function() {
+      document.getElementById("menu").classList.toggle("show");
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#000" },
+        "shape": {
+          "type": "circle",
+          "stroke": { "width": 0, "color": "#000000" },
+          "polygon": { "nb_sides": 5 }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": true,
+          "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+        },
+        "size": {
+          "value": 3,
+          "random": true,
+          "anim": { "enable": true, "speed": 40, "size_min": 0.1, "sync": false }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#000",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" },
+          "resize": true
+        },
+        "modes": {
+          "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
+          "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+          "repulse": { "distance": 100, "duration": 0.4 },
+          "push": { "particles_nb": 4 },
+          "remove": { "particles_nb": 2 }
+        }
+      },
+      "retina_detect": true
+    });
+  
+    document.addEventListener("DOMContentLoaded", function() {
+    
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+  
+     
+      const socialLinksData = [
+          { href: "https://facebook.com", iconClass: "fab fa-facebook-f" },
+          { href: "https://twitter.com", iconClass: "fab fa-twitter" },
+          { href: "https://instagram.com", iconClass: "fab fa-instagram" },
+          { href: "https://linkedin.com", iconClass: "fab fa-linkedin-in" },
+      ];
+  
+      const socialLinksContainer = document.getElementById("social-links");
+      socialLinksData.forEach(link => {
+          const anchor = document.createElement("a");
+          anchor.href = link.href;
+          anchor.target = "_blank";
+          anchor.innerHTML = `<i class="${link.iconClass}"></i>`;
+          socialLinksContainer.appendChild(anchor);
+      });
+  });
+  </script>
+  
+  </body>
+  </html>
+  

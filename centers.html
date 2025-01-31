@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mafikeng Digital Innovation Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+ <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+        }
+        
+#header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+.logo img {
+  width: 100px;
+  height: auto;
+ 
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: #000;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-menu a:hover {
+  color: #e1b800;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transform: perspective(800px) rotateY(10deg);
+}
+
+.drop-down ul {
+  position: absolute;
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 10px 0;
+}
+
+.drop-down:hover ul {
+  display: block;
+}
+
+.drop-down ul li {
+  padding: 5px 15px;
+}
+
+.header-social-links a {
+  color: black;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.header-social-links a:hover {
+  color: #fd7000;
+  transform: scale(1.1);
+}
+
+@media (max-width: 991px) {
+  .nav-menu {
+    display: none;
+  }
+  .header-social-links {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  #mobile-menu {
+    display: block;
+    cursor: pointer;
+  }
+  #menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 100%;
+  }
+  #menu.show {
+    display: flex;
+  }
+}
+
+#particles-js {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 99%;
+}
+#particle-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 99%;
+}
+.satellite{
+        font-size: 1rem;
+       margin-bottom: 30px;
+}
+.zones-title{
+  font-size: 2rem;
+  font-weight: bold;
+}
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            margin: 20px 0;
+            
+        }
+       
+        .intro {
+          background: url('images/back.jpg') no-repeat center center / cover;
+            color: #fff;
+            padding: 200px 20px;
+            text-align: center;
+            margin-top: -20px;
+        }
+        .intro h1 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .intro p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .center-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .clickable-div {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+.clickable {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+.section-item {
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.section-item:hover {
+    transform: scale(1.05);
+}
+
+.section-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.section-item h3 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.section-item p {
+    font-size: 16px;
+}
+.s-centres{
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+}
+        #footer {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+
+.footer-logo img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+
+.footer-links a {
+    color: #333;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.social-icons a {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #333;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+    </style>
+</head>
+<body>
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo mr-auto"><img src="assets/img/favicon.png" alt="Logo" class="img-fluid"></a>
+      <nav class="nav-menu d-none d-lg-flex">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="drop-down"><a href="#">About</a>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="partners.html">Partners and Donations</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="#">Recruitment</a>
+            <ul>
+              <li><a href="Incubation-application.html">Incumbent Applications</a></li>
+              <li><a href="vacancies.html">Vacancies</a></li>
+              <li><a href="programs.html">Programs</a></li>
+            </ul>
+          </li>
+          <li><a href="companies.html">Companies</a></li>
+          <li class="drop-down"><a href="#">Services</a>
+            <ul>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="prices.html">Prices</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="centers.html">Centers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-social-links">
+        <a href="https://twitter.com/MafIHub" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/Mafihub" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/mafikeng.innovation.hub" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/mafikeng-digital-innovation-hub/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div id="mobile-menu" class="d-lg-none"><i class="fas fa-bars"></i></div>
+      <div id="menu" class="d-lg-none">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="drop-down"><a href="#">About</a>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="team.html">Team</a></li>
+              <li><a href="partners.html">Partners and Donations</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="#">Recruitment</a>
+            <ul>
+              <li><a href="Incubation-application.html">Incumbent Applications</a></li>
+              <li><a href="vacancies.html">Vacancies</a></li>
+              <li><a href="programs.html">Programs</a></li>
+            </ul>
+          </li>
+          <li><a href="companies.html">Companies</a></li>
+          <li class="drop-down"><a href="#">Services</a>
+            <ul>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="prices.html">Prices</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="tenders.html">Tenders</a></li>
+          <li><a href="centers.html">Centres</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+    <section class="intro">
+        <h1>Mafikeng Digital Innovation Hub Centres</h1>
+        <p>Transforming North West Province with Innovation and Technology</p>
+    </section>
+
+    <div class="center">
+     
+    <section class="fade-in">
+      <div id="particles-js"></div>
+        <p>North West Province is embracing the future, positioning itself as a hub for innovation and technology in Southern Africa. With a strategic focus on tech advancement, digital empowerment, and sustainability, the region aims to unlock new opportunities for growth, job creation, and community development.</p>
+        <p>By investing in cutting-edge technologies, including AI, Agritech, AWS, and more, North West is setting the stage for a digital transformation that will shape the future for generations to come. Innovation is the key to unlocking the potential of industries, fostering economic growth, and creating smarter, more efficient communities.</p>
+    </section>
+
+    <section class="center fade-in">
+        <h2 class="center-title">Mafikeng Digital Innovation Hub (MDiHub)</h2>
+        <p>MDiHub is the heart of innovation in North West Province. This is where tech enthusiasts, entrepreneurs, and visionaries come together to push the boundaries of what's possible in the digital world. From hosting workshops and training to facilitating access to digital tools, MDiHub is dedicated to building a more innovative future for the province.</p>
+    </section>
+</div>
+
+<section class="zones">
+  <div class="Specialized-zones">
+    <h2 class="zones-title">Specialized Zones</h2>
+    <p class="text-zones"> Our facilities include the latest and world class technology to assist entrepreneurs realize their dreams and bring their ideas to life, the following are our space around the MDIHub main centre.</p>
+   
+    <a href="NMM.html" class="clickable">
+      <div class="section-item">
+        <div class="icons">
+          <i class="ri-store-line" style="color: #ffbb2c;"></i>
+          <h3>Makerspace</h3>
+      </div>
+    </div>
+  </a>
+
+
+  <a href="NMM.html" class="clickable">
+    <div class="section-item">
+      <div class="icons">
+      <i class='bx bx-glasses-alt' style="color: #5578ff;"></i>
+        <h3>Augmented & Virtual Reality Lab</h3>
+    </div>
+  </div>
+</a>
+<a href="NMM.html" class="clickable">
+  <div class="section-item">
+    <div class="icons">
+    <i class="bx bx-tachometer" style="color: #e80368;"></i>
+      <h3>Application & Testing Lab</h3>
+  </div>
+</div>
+</a>
+<a href="NMM.html" class="clickable">
+  <div class="section-item">
+    <div class="icons">
+         <i class='bx bx-desktop' style="color: #e361ff;"></i>
+      <h3>Landing Office Space</h3>
+  </div>
+</div>
+ 
+</a>
+<a href="NMM.html" class="clickable">
+  <div class="section-item">
+    <div class="icons">
+    <i class='bx bx-shape-polygon'  style="color: #47aeff;"></i>
+      <h3>Meeting Rooms</h3>
+    </div> 
+  </div>
+</a>
+<a href="NMM.html" class="clickable">
+  <div class="section-item">
+    <div class="icons">
+    <i class="ri-gradienter-line" style="color: #ffa76e;"></i>
+      <h3>Innovation Rooms</h3>
+  </div>
+</div>
+</a>
+<a href="NMM.html" class="clickable">
+  <div class="section-item">
+    <div class="icons">
+    <i class='bx bx-selection' style="color: #11dbcf;"></i>
+      <h3>Co-working space</h3>
+  </div>
+</div>
+</a>
+<a href="NMM.html" class="clickable">
+  <div class="icons">
+    <i class='bx bx-brain' style="color: #4233ff;"></i>
+      <h3>A.I Lab</h3>
+  </div>
+</div>
+</a>
+
+  </div>
+ </section>
+
+    <section class="section-content">
+      <h2 class="s-centres">Satellite Offices (Centres)</h2><br>
+      <p class="satellite"> Mafikeng Digital Innovation Hub also has satellite offices (centres) in four districts
+      in the North West province. <br> In the Ngaka Modiri Molema district, it is where the main centre is located alongside, the Mafikeng Cisco EDGE Centre (Incubation space with a Cisco Networking Academy), Cisco EDGE center is also home to the Microsoft Power Platform in AgriTech SIFA project and Living Lab (grassroots programs & digital literacy). <br>
+    
+      <br> The Dr Ruth Segomotsi Mompati district lies the AgriTech centre at the Taung Agricultural College which specializes in Strategic technological interventions in agriculture.
+       <br><br> The Dr Kenneth Kaunda District, currently based in Klerksdorp is focused on AWS-based solutions with projects spanning Agritech, healthcare, and predictive maintenance for the mining sector.
+       <br><br> Bojanala, in Rustenburg is home to the Artificial Intelligence in AgriTech centre. Design, develop, and deploy an AI solution using Microsoft Azure to address a specific agricultural challenge using an innovation. <br> In the same distric, in Moruleng lies the INSETA centre. The Insurance Sector Education and Training Authority's (INSETA) primary purpose is grow the pool and quality of critical and scarce skills within the insurance sector. These skills enhance the sector while supporting the transformation of the country. 
+      </p>
+      <a href="NMM.html" class="clickable-div">
+        <div class="section-item">
+            <img src="images/cisco.png" alt="Ngaka Modiri Molema">
+            <h3>Ngaka Modiri Molema</h3>
+            <p>Cisco Edge and Power Platform training alongside Living Lab for Agritech</p>
+        </div>
+    </a>
+    <a href="RSM.html" class="clickable-div">
+        <div class="section-item">
+            <img src="images/taung-agri.png" alt="Dr. RSM">
+            <h3>Dr. RSM</h3>
+            <p>Taung Agricultural College and Agritech</p>
+        </div>
+    </a>
+    <a href="KK.html" class="clickable-div">
+        <div class="section-item">
+            <img src="images/aws.jpg" alt="Dr. KK">
+            <h3>Dr. KK</h3>
+            <p>Klerksdorp AWS Training</p>
+        </div>
+    </a>
+    <a href="Bojanala.html" class="clickable-div">
+        <div class="section-item">
+            <img src="images/rusty.jpg" alt="Bojanala">
+            <h3>Bojanala</h3>
+            <p>AI Center in Rustenburg CBD and INSETA in Moruleng</p>
+        </div>
+    </a>
+    
+      
+    </section>
+
+    
+
+<footer id="footer">
+  <div class="footer-content">
+      <div class="footer-logo">
+          <img src="images/logo.png" alt="Brand Logo">
+      </div>
+      
+      <div class="footer-links">
+          <a href="#terms">Terms & Conditions</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#cookies">Cookies</a>
+      </div>
+      
+      <div id="social-links" class="social-icons">
+         
+      </div>
+
+      <p class="copyright">
+          &copy; <span id="current-year"></span> Mafikeng Digital Innovation Hub. All Rights Reserved.
+      </p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  document.getElementById("mobile-menu").onclick = function() {
+    document.getElementById("menu").classList.toggle("show");
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS('particles-js', {
+    "particles": {
+      "number": {
+        "value": 80,
+        "density": { "enable": true, "value_area": 800 }
+      },
+      "color": { "value": "#996515" },
+      "shape": {
+        "type": "circle",
+        "stroke": { "width": 0, "color": "#000000" },
+        "polygon": { "nb_sides": 5 }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": true,
+        "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": { "enable": true, "speed": 40, "size_min": 0.1, "sync": false }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#996515",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" },
+        "onclick": { "enable": true, "mode": "push" },
+        "resize": true
+      },
+      "modes": {
+        "grab": { "distance": 400, "line_linked": { "opacity": 1 } },
+        "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 },
+        "repulse": { "distance": 100, "duration": 0.4 },
+        "push": { "particles_nb": 4 },
+        "remove": { "particles_nb": 2 }
+      }
+    },
+    "retina_detect": true
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+  
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+
+   
+    const socialLinksData = [
+        { href: "https://facebook.com", iconClass: "fab fa-facebook-f" },
+        { href: "https://twitter.com", iconClass: "fab fa-twitter" },
+        { href: "https://instagram.com", iconClass: "fab fa-instagram" },
+        { href: "https://linkedin.com", iconClass: "fab fa-linkedin-in" },
+    ];
+
+    const socialLinksContainer = document.getElementById("social-links");
+    socialLinksData.forEach(link => {
+        const anchor = document.createElement("a");
+        anchor.href = link.href;
+        anchor.target = "_blank";
+        anchor.innerHTML = `<i class="${link.iconClass}"></i>`;
+        socialLinksContainer.appendChild(anchor);
+    });
+});
+</script>
+
+</body>
+</html>

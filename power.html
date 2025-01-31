@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Platform</title>
+</head>
+<style>
+    body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff; 
+        color: #000; 
+    }
+    .power{
+        margin-top: 65px;
+    }
+    header {
+background-color: #003366;
+padding: 2vw 0;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
+
+.header-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+padding: 0 5vw;
+max-width: 1200px;
+}
+
+.logo-left img, .logo-right img {
+max-height: clamp(30px, 10vw, 80px);
+}
+
+.title-center {
+text-align: center;
+flex-grow: 1;
+font-size: clamp(0.7rem, 1vw, 1rem);
+}
+
+.logo-right {
+margin-left: auto;
+}
+
+@media (max-width: 768px) {
+.header-container {
+    flex-direction: column;
+    align-items: center;
+}
+.title-center {
+    order: 2;
+    font-size: 1rem;
+}
+
+.logo-left, .logo-right {
+    margin: 5px 0;
+}
+}
+
+.section {
+padding: 1rem;
+}
+.section:hover{
+transform: scale(1.2);
+}
+.center-info {
+background-color: transparent;
+color: #000;
+margin: 1rem auto;
+padding: 1rem;
+width: 90%;
+max-width: 1200px;
+}
+
+h2 {
+color: #003366;
+font-weight: bold;
+font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+h5 {
+margin: 0.5rem 0;
+font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+
+.card-container {
+display: flex;
+width: 100%;
+justify-content: space-between;
+align-items: flex-start;
+gap: 20px;
+}
+
+.text-content {
+flex: 1;
+padding-right: 40px;
+}
+
+.features-list {
+list-style: none;
+padding: 0;
+}
+
+.features-list li {
+margin-bottom: 10px;
+flex-basis: 45%;
+}
+
+.image-content img, 
+.video-content video {
+width: 100%;
+height: auto;
+border-radius: 5px;
+}
+
+.fade-in {
+opacity: 0;
+transform: translateY(20px);
+animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+    .Gallery {
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 20px;
+        text-align: center; 
+    }
+    .Gallery h1 {
+        font-size: 2.5em; 
+        margin-bottom: 20px; 
+        color: #333; 
+    }
+    .images {
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+        gap: 10px; 
+    }
+    .images img {
+        width: 100%; 
+        height: auto; 
+        border-radius: 8px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        transition: transform 0.3s ease; 
+    }
+    .images img:hover {
+        transform: scale(1.05); 
+    }
+    .team-section {
+padding: 50px 20px;
+background-color: #fff;
+text-align: center;
+}
+
+.team-section h2 {
+margin-bottom: 30px;
+font-size: 2.5em;
+color: #333;
+}
+
+.team-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.team-member {
+position: relative;
+}
+
+.card2 {
+padding: 20px;
+border-radius: 1px; 
+box-shadow: 0 4px 8px #000;
+transition: transform 0.3s ease-in-out;
+position: relative;
+}
+
+.card2 img {
+width: 100%;
+height: 220px; 
+object-fit: cover;
+}
+
+.info {
+padding: 15px;
+text-align: center;
+position: relative;
+}
+
+.title {
+color: #666;
+}
+
+.bio {
+display: none; 
+color: #333;
+}
+
+
+.card2:hover .bio {
+display: block; 
+}
+
+.card2:hover .title {
+display: none; 
+}
+
+.card2:hover {
+transform: translateY(-10px) scale(1.03);
+}
+
+.loading {
+--speed-of-animation: 0.9s;
+--gap: 6px;
+--first-color: #4c86f9;
+--second-color: #49a84c;
+--third-color: #f6bb02;
+--fourth-color: #f6bb02;
+--fifth-color: #2196f3;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100px;
+gap: 6px;
+height: 100px;
+}
+
+.loading span {
+width: 4px;
+height: 50px;
+background: var(--first-color);
+animation: scale var(--speed-of-animation) ease-in-out infinite;
+}
+
+.loading span:nth-child(2) {
+background: var(--second-color);
+animation-delay: -0.8s;
+}
+
+.loading span:nth-child(3) {
+background: var(--third-color);
+animation-delay: -0.7s;
+}
+
+.loading span:nth-child(4) {
+background: var(--fourth-color);
+animation-delay: -0.6s;
+}
+
+.loading span:nth-child(5) {
+background: var(--fifth-color);
+animation-delay: -0.5s;
+}
+
+@keyframes scale {
+0%, 40%, 100% {
+transform: scaleY(0.05);
+}
+
+20% {
+transform: scaleY(1);
+}
+}
+
+#wifi-loader {
+--background: #62abff;
+--front-color: #4f29f0;
+--back-color: #c3c8de;
+--text-color: #414856;
+width: 64px;
+height: 64px;
+border-radius: 50px;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+left: 80px;
+top: 80px;
+}
+
+#wifi-loader svg {
+position: absolute;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#wifi-loader svg circle {
+position: absolute;
+fill: none;
+stroke-width: 6px;
+stroke-linecap: round;
+stroke-linejoin: round;
+transform: rotate(-100deg);
+transform-origin: center;
+}
+
+#wifi-loader svg circle.back {
+stroke: var(--back-color);
+}
+
+#wifi-loader svg circle.front {
+stroke: var(--front-color);
+}
+
+#wifi-loader svg.circle-outer {
+height: 86px;
+width: 86px;
+}
+
+#wifi-loader svg.circle-outer circle {
+stroke-dasharray: 62.75 188.25;
+}
+
+#wifi-loader svg.circle-outer circle.back {
+animation: circle-outer135 1.8s ease infinite 0.3s;
+}
+
+#wifi-loader svg.circle-outer circle.front {
+animation: circle-outer135 1.8s ease infinite 0.15s;
+}
+
+#wifi-loader svg.circle-middle {
+height: 60px;
+width: 60px;
+}
+
+#wifi-loader svg.circle-middle circle {
+stroke-dasharray: 42.5 127.5;
+}
+
+#wifi-loader svg.circle-middle circle.back {
+animation: circle-middle6123 1.8s ease infinite 0.25s;
+}
+
+#wifi-loader svg.circle-middle circle.front {
+animation: circle-middle6123 1.8s ease infinite 0.1s;
+}
+
+#wifi-loader svg.circle-inner {
+height: 34px;
+width: 34px;
+}
+
+#wifi-loader svg.circle-inner circle {
+stroke-dasharray: 22 66;
+}
+
+#wifi-loader svg.circle-inner circle.back {
+animation: circle-inner162 1.8s ease infinite 0.2s;
+}
+
+#wifi-loader svg.circle-inner circle.front {
+animation: circle-inner162 1.8s ease infinite 0.05s;
+}
+
+#wifi-loader .text {
+position: absolute;
+bottom: -40px;
+display: flex;
+justify-content: center;
+align-items: center;
+text-transform: lowercase;
+font-weight: 500;
+font-size: 0.9rem;
+letter-spacing: 0.2px;
+}
+
+#wifi-loader .text::before, #wifi-loader .text::after {
+content: attr(data-text);
+}
+
+#wifi-loader .text::before {
+color: var(--text-color);
+}
+
+#wifi-loader .text::after {
+color: var(--front-color);
+animation: text-animation76 3.6s ease infinite;
+position: absolute;
+left: 0;
+}
+
+@keyframes circle-outer135 {
+0% {
+stroke-dashoffset: 25;
+}
+
+25% {
+stroke-dashoffset: 0;
+}
+
+65% {
+stroke-dashoffset: 301;
+}
+
+80% {
+stroke-dashoffset: 276;
+}
+
+100% {
+stroke-dashoffset: 276;
+}
+}
+
+@keyframes circle-middle6123 {
+0% {
+stroke-dashoffset: 17;
+}
+
+25% {
+stroke-dashoffset: 0;
+}
+
+65% {
+stroke-dashoffset: 204;
+}
+
+80% {
+stroke-dashoffset: 187;
+}
+
+100% {
+stroke-dashoffset: 187;
+}
+}
+
+@keyframes circle-inner162 {
+0% {
+stroke-dashoffset: 9;
+}
+
+25% {
+stroke-dashoffset: 0;
+}
+
+65% {
+stroke-dashoffset: 106;
+}
+
+80% {
+stroke-dashoffset: 97;
+}
+
+100% {
+stroke-dashoffset: 97;
+}
+}
+
+@keyframes text-animation76 {
+0% {
+clip-path: inset(0 100% 0 0);
+}
+
+50% {
+clip-path: inset(0);
+}
+
+100% {
+clip-path: inset(0 0 0 100%);
+}
+}
+
+
+
+.loader {
+position: absolute;
+margin-top: 70px;
+}
+
+.cercle {
+position: absolute;
+background: #3e82f7;
+border-radius: 50%;
+width: 60px;
+height: 60px;
+top: -40px;
+left: 150px; 
+animation: move-up6 .4s ease-in infinite alternate-reverse;
+z-index: 1;
+}
+
+
+.cercle:nth-child(2) {
+width: 25px;
+height: 25px;
+top: -2px;
+left: 120px;
+background: #8b008b;
+animation: move-down1 .4s ease-in infinite alternate-reverse;
+}
+
+.cercle:nth-child(3) {
+width: 30px;
+height: 30px;
+top: 35px;
+left: 100px;
+background: #fff700;
+animation: move-updown1 .4s ease-in infinite alternate-reverse;
+}
+
+.cercle:nth-child(4) {
+width: 12px;
+height: 12px;
+top: -10px;
+left: 110px;
+background: #00711e;
+animation: move-up6 .4s ease-in infinite alternate-reverse;
+}
+
+@keyframes move-up6 {
+to {
+transform: translateY(-5px);
+}
+}
+
+@keyframes move-down1 {
+to {
+transform: translateY(5px);
+}
+}
+
+@keyframes move-updown1 {
+to {
+transform: translateY(10px);
+}
+
+from {
+transform: translateY(-7px);
+}
+}
+
+.next {
+position: fixed; 
+bottom: 80px; 
+right: 20px; 
+}
+
+.platform-button {
+display: inline-block;
+padding: 10px 20px; 
+background-color: #49a84c; 
+color: black; 
+border: none; 
+border-radius: 5px; 
+text-decoration: none; 
+font-size: 1rem; 
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+transition: background-color 0.3s, transform 0.3s; 
+}
+
+.platform-button:hover {
+background-color: #4f29f0; 
+transform: translateY(-2px); 
+}
+.breadcrumb {
+font-size: 1rem;
+margin-bottom: 2px;
+padding-left: 15px;
+display: flex;
+align-items: center;
+}
+
+.breadcrumb a {
+text-decoration: none;
+color: #003366; 
+font-weight: 700;
+}
+
+.breadcrumb a:hover {
+text-decoration: underline;
+}
+
+.breadcrumb span {
+color: #49a84c; 
+font-weight: 700; 
+}
+
+
+
+footer {
+position: fixed; 
+bottom: 0; 
+left: 0; 
+right: 0; 
+background-color: #003366; 
+color: white; 
+text-align: center; 
+padding: 10px 0; 
+font-size: 0.9rem; 
+}
+
+.section {
+padding: 20px;
+margin: 10px auto;
+margin-bottom: 70px;
+width: 90%;
+max-width: 800px;
+background-color: #ffffff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+color: #ffffff; /
+font-size: 1.8em;
+}
+
+.section p, .section ul {
+font-size: 1em;
+margin: 10px 0;
+}
+
+.section ul {
+list-style-type: disc;
+padding-left: 20px;
+}
+
+.section a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+}
+
+.section a:hover {
+text-decoration: underline;
+}
+
+.cta-btn {
+display: inline-block;
+padding: 10px 20px;
+background-color: #0078D4;
+color: #fff;
+border-radius: 4px;
+text-decoration: none;
+}
+
+.cta-btn:hover {
+background-color: #005A8D;
+}
+
+#targeted-sectors{
+background-color: #49a84c;
+color: #fff;
+}
+#networking-academy{
+background-color: #f69d02;
+color: #fff;
+}
+#incubation-program{
+background-color: #003366;
+color: #fff;
+}
+#mdi-hub{
+background-color: #ba0000;
+color: #fff;
+}
+.hot {
+text-align: center;
+margin: 20px;
+}
+
+.office-container {
+display: flex;
+flex-wrap: wrap;
+gap: 20px;
+justify-content: center;
+margin-bottom: 80px;
+}
+
+.office-space {
+background-color: #fff;
+padding: 20px;
+border: none;
+width: calc(25% - 10px); 
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+text-align: left;
+}
+
+.office-space img {
+width: 100%;
+
+margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+.office-space {
+    width: 100%; 
+}
+}
+.loader-container {
+      position: relative;
+      text-align: center;
+    }
+    
+    .bubble {
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle at 30% 30%, #4CAF50, #388E3C);
+      border-radius: 50%;
+      box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.3),
+                  inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+                  0 10px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: bubbleExpand 2s forwards, bubbleBurst 1s 2s forwards;
+      margin-left: 280px;
+    }
+    
+    .text {
+      font-size: 24px;
+      color: #333;
+      opacity: 0;
+      animation: fadeInText 1s 3s forwards;
+    }
+    
+    @keyframes bubbleExpand {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1.5); }
+    }
+    
+    @keyframes bubbleBurst {
+      0% { opacity: 1; transform: scale(1.5); }
+      100% { opacity: 0; transform: scale(2); }
+    }
+    
+    @keyframes fadeInText {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .header {
+            position: relative;
+            background: linear-gradient(135deg, #680098, #0c8f00);
+            text-align: center;
+            padding: 20px 0;
+            color: white;
+            perspective: 1000px; 
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            transform-style: preserve-3d;
+            animation: rotateHeader 6s ease-in-out infinite;
+        }
+
+        @keyframes rotateHeader {
+            0% {
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+
+            25% {
+                transform: rotateY(15deg) rotateX(5deg);
+            }
+
+            50% {
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+
+            75% {
+                transform: rotateY(-15deg) rotateX(5deg);
+            }
+
+            100% {
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 0px;
+        }
+
+        .logo {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(0);
+            animation: logoHover 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes logoHover {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+.homepage-video-container {
+    position: relative;
+    width: 100%;
+    height: 80vh; 
+    overflow: hidden;
+    margin: 0;
+}
+.homepage-video {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    height: auto; 
+    transform: translate(-50%, -50%); 
+    object-fit: cover; 
+    z-index: -1; 
+}
+
+.homepage-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; 
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    z-index: 1; 
+    opacity: 1; 
+    transition: opacity 2s ease-out; 
+}
+
+.homepage-text-overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.homepage-text-overlay span {
+    color: #fd7000;
+    font-size: 4rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    animation: highlightText 2s infinite alternate; 
+}
+
+@keyframes highlightText {
+    0% {
+        text-shadow: 0 0 10px #00711e, 0 0 20px #00711e, 0 0 30px #00711e;
+    }
+    100% {
+        text-shadow: 0 0 20px #680098, 0 0 30px #680098, 0 0 40px #680098;
+    }
+}
+
+</style>
+<body>
+    <header class="header">
+        <h1>Microsoft Power Platform</h1>
+        <div class="logos">
+            <div class="logo">
+                <img src="images/apps.png" alt="Power Apps">
+            </div>
+            <div class="logo">
+                <img src="images/automate.png" alt="Power Automate">
+            </div>
+            <div class="logo">
+                <img src="images/BI.webp" alt="Power BI">
+            </div>
+            <div class="logo">
+                <img src="images/Agent.png" alt="Power Virtual Agents">
+            </div>
+            <div class="logo">
+                <img src="images/PowerPages.png" alt="Power Pages">
+            </div>
+        </div>
+    </header>
+
+                       <!-- Homepage Video Container -->
+<div class="homepage-video-container">
+    <video class="homepage-video" loop autoplay muted>
+        <source src="images/video (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <!-- Overlay Text -->
+    <div class="homepage-text-overlay">
+        <h1>Welcome to the <span>Low-code/No-code</span> World</h1>
+    </div>
+</div>
+
+
+    <div class="loader">
+
+        <div class="cercle">
+        </div>
+        <div class="cercle">
+        </div>
+        <div class="cercle">
+        </div>
+        <div class="cercle">
+        </div>
+      
+      </div>
+
+<section class="power" id="power-platform">
+        <div class="container">
+            <div class="center-info">
+                <h2>Microsoft Power Platform</h2>
+                <div class="card gold-card" style="margin-top: 60px;">
+                    <div class="card-content" style="display: flex; align-items: flex-start; justify-content: space-between;">
+                        <!-- Text Content Container -->
+                        <div class="text-container" style="flex: 1 1 50%; padding-right: 40px;">
+                            <h4>
+                                The Cisco EDGE center is also home to a team of dedicated software developers, led by <strong>Mokwanatle Rebaone</strong>, specializing in Microsoft Power Platform and software development.
+                            </h4>
+                            <p>
+                                Microsoft Power Platform is a suite of low-code/no-code tools that empower users to build custom apps, automate workflows, analyze data, and create intelligent virtual agents. In the agritech sector, it can be leveraged to optimize farm operations by integrating IoT sensors, managing crop data, and improving resource allocation.
+                                <br>
+                                Additionally, the platform enables collaboration across teams by connecting data from multiple sources, making it easier to monitor agricultural processes efficiently.
+                            </p>
+    
+                            <h1 style="margin-top: 20px;">Benefits of Microsoft Power Platform</h1>
+                            <ul style="list-style-type: none; padding: 0;">
+                                <li style="margin-bottom: 10px;"><strong>Custom App Development</strong> – Build custom solutions without coding experience.</li>
+                                <li style="margin-bottom: 10px;"><strong>Workflow Automation</strong> – Automate routine tasks to save time and resources.</li>
+                                <li style="margin-bottom: 10px;"><strong>Data Analytics</strong> – Use data to make informed decisions with Power BI.</li>
+                                <li style="margin-bottom: 10px;"><strong>AI Insights</strong> – Leverage AI to forecast trends and analyze data efficiently.</li>
+                                <li style="margin-bottom: 10px;"><strong>Collaboration Tools</strong> – Improve communication between teams with integrated data sharing.</li>
+                            </ul>
+                        </div>
+    
+        
+                    <div class="services-images" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;">
+                        <div style="text-align: center; margin: 10px;">
+                            <img src="images/apps.png" alt="App Development" style="width: 150px; height: auto; border-radius: 5px;">
+                            <p style="color: black;"><strong>Power Apps</strong></p>
+                        </div>
+                        <div style="text-align: center; margin: 10px;">
+                            <img src="images/automate.png" alt="Workflow Automation" style="width: 150px; height: auto; border-radius: 5px;">
+                            <p style="color: black;"><strong>Power Automate</strong></p>
+                        </div>
+                        <div style="text-align: center; margin: 10px;">
+                            <img src="images/BI.webp" alt="Data Analytics" style="width: 150px; height: auto; border-radius: 5px;">
+                            <p style="color: black;"><strong>Power BI</strong></p>
+                        </div>
+                        <div style="text-align: center; margin: 10px;">
+                            <img src="images/Agent.png" alt="AI Insights" style="width: 150px; height: auto; border-radius: 5px;">
+                            <p style="color: black;"><strong>Power Virtual Agents</strong></p>
+                        </div>
+                        <div style="text-align: center; margin: 10px;">
+                            <img src="images/PowerPages.png" alt="Power Pages" style="width: 150px; height: auto; border-radius: 5px;">
+                            <p style="color: black;"><strong>Power Pages</strong></p>
+                        </div>
+                        <div style="text-align: center; margin: 10px;">
+                            <img src="images/Dataverse.webp" alt="DadaVerse" style="width: 150px; height: auto; border-radius: 5px;">
+                            <p style="color: black;"><strong>Microsoft Dataverse</strong></p>
+                        </div>
+                        <div style="text-align: center; margin: 10px;">
+                            <img src="images/microsoft-AI-Builder-icon.png" alt="AI Builder" style="width: 150px; height: auto; border-radius: 5px;">
+                            <p style="color: black;"><strong>AI Builder</strong></p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<section id="team" class="team-section">
+    <div class="loader-container">
+        <div class="bubble"></div>
+         <h2 class="text">Meet Our Team</h2><br>
+      </div>
+    
+    <section style="display: flex; align-items: center; max-width: 800px; margin: auto;">
+        <img src="images/Reba.jpg" alt="Profile Picture" style="width: 300px; height: 400px; border-radius: 50%; margin-right: 20px;">
+        <div>
+            <h3 style="margin: 0; font-size: 1.8em; color: #333;">Rebaone Mokwanatle</h3>
+            <h4 style="margin: 5px 0 15px; font-size: 1.2em; color: #666;">Microsoft Power Platform Facilitator</h4>
+            <p style="font-size: 1.1em; line-height: 1.5; color: #333;">
+                I’m a project manager and developer with a strong focus on the Microsoft Power Platform, where I support software developers in crafting innovative solutions.
+                I bring expertise in GitHub, Netlify, and React, leading projects like the Tlapeng Digital Tuckshop website, the SWVNK Lab landing page, and BizConnect, a business messaging platform. My approach centers on creating responsive, high-performing applications. Certified in Microsoft Power Platform Fundamentals and Advanced Google Analytics.
+            </p>
+        </div>
+    </section>
+    
+</section>
+
+    <section id="team" class="team-section">
+    <h2>Meet Our Future Skills Development Team</h2>
+    <h3>All of our candidates have been certified in Microsoft Power Platform Fundamentals (PL-900)</h3>
+    <div class="team-container">
+        <div class="team-member">
+            <div class="card2">
+                <img src="images/kea.jpg" alt="Kea">
+                <div class="info">
+                    <h3>Keabetswe Masondo</h3>
+                    <p class="title">SIFA Candidate</p>
+                    <p class="bio">N6 in Information Technology.</p>
+                </div>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="card2">
+                <img src="images/Skabade.jpg" alt="Scay">
+                <div class="info">
+                    <h3>Skabade Rakosa</h3>
+                    <p class="title">SIFA Candidate</p>
+                    <p class="bio">BSc Computer Science & Mathematics.</p>
+                </div>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="card2">
+                <img src="images/Teboho.jpg" alt="Teboho">
+                <div class="info">
+                    <h3>Teboho Seqhofa</h3>
+                    <p class="title">SIFA Candidate</p>
+                    <p class="bio">BA Marketing & Communications.</p>
+                </div>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="card2">
+                <img src="images/Thabang.jpg" alt="Thabang">
+                <div class="info">
+                    <h3>Thabang Ndaba</h3>
+                    <p class="title">SIFA Candidate</p>
+                    <p class="bio">Graphic Design.</p>
+                </div>
+            </div>
+        </div>
+        <div class="team-member">
+            <div class="card2">
+                <img src="images/Calvin.jpg" alt="Calvin">
+                <div class="info">
+                    <h3>Calvin Marungwane</h3>
+                    <p class="title">SIFA Candidate</p>
+                    <p class="bio">...Lorem Ipsum...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section id="team" class="team-section">
+        <h2>Meet Our MICT SETA Team</h2>
+        <h3>A warm welcome to our new team members</h3>
+        <div class="team-container">
+            <div class="team-member">
+                <div class="card2">
+                    <img src="images/Osego.jpg" alt="Osego">
+                    <div class="info">
+                        <h3>Osego Mohutsiwa</h3>
+                        <p class="title">MICT Candidate</p>
+                        <p class="bio">N6 IT Certificate.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="card2">
+                    <img src="images/Isaac.jpg" alt="Jane Smith">
+                    <div class="info">
+                        <h3>Isaac Sehole</h3>
+                        <p class="title">MICT Candidate</p>
+                        <p class="bio">N6 IT Certificate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>    
+
+
+<footer>
+    &copy; <span id="current-year"></span> Mafikeng Digital Innovation Hub. All rights reserved.
+</footer>
+
+<script >
+    // Fade out the text after 10 seconds
+setTimeout(function() {
+    document.querySelector('.homepage-text-overlay').style.opacity = 0;
+}, 10000); // 10 seconds
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Cursor</title>
+  <style>
+    /* Reset the default cursor */
+    body {
+      cursor: none;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #6e45e2, #88d3ce);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    
+    .custom-cursor {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ffff00;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      pointer-events: none;
+      transition: transform 0.1s ease-out;
+      mix-blend-mode: difference;
+    }
+
+   
+    .custom-cursor::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 2px solid white;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .custom-cursor.hover {
+      transform: scale(1.5);
+    }
+    /* Interactive hover effect */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: white;
+      color: #6e45e2;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    button:hover {
+      background: #6e45e2;
+      color: white;
+    }
+
+    /* Add hover effect */
+    
+  </style>
+</head>
+<body>
+  <div class="custom-cursor" id="cursor"></div>
+  <button>Hover Me!</button>
+
+  <script>
+    const cursor = document.getElementById('cursor');
+
+   
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = `${e.pageX}px`;
+      cursor.style.top = `${e.pageY}px`;
+    });
+
+   
+    document.querySelectorAll('button').forEach((button) => {
+      button.addEventListener('mouseenter', () => {
+        cursor.classList.add('hover');
+      });
+      button.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hover');
+      });
+    });
+  </script>
+</body>
+</html>
